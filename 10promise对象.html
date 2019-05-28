@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+
+        var promise = new Promise(function (resolve, reject) {
+            $.ajax({
+                url: "https://api.github.com/users",
+                success: function (res) {
+                    var res = 60
+                    resolve(res)
+                }
+            })
+        })
+
+        promise.then(function (score) {
+            if (score >=60) {
+                console.log("去玩");
+            } else {
+                console.log('写作业');
+            }
+        }).catch(function(){
+            '考试失败'
+        })
+    </script>
+
+</body>
+
+</html>

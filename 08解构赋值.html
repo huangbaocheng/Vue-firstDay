@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var  obj = { a: 1, b: 2, c: 3 };
+        // var {a,b,c} =obj
+        // console.log(a);//1
+        // console.log(b);//2
+        // console.log(c);//3
+        // // console.log(d);//报错  未知
+        // console.log(22222222222);
+        // var c =123
+        // var {a,b,c:c1}=obj
+        // console.log(c);//123
+        // console.log(c1);//3
+
+        // let声明变量在作用域内不能重复声明
+            // let a = 99;
+
+            // // 报错，变量a已经存在
+            // // let {a} = {a: 1, b: 2, c: 3} 
+
+            // // 冒号后面可以重命名
+            // let { a: newA } = { a: 1, b: 2, c: 3 }
+            // console.log(newA)
+             Object.keys(obj).map(v=>{
+                console.log(obj[v]);//1 2 3
+            })
+            for (var a in obj){
+                console.log(obj[a]);
+            }
+    </script>
+</body>
+</html>

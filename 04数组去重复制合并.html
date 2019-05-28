@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //去重
+        var arr=[1,1,3,3,4,4,2,2,5,5]
+        var arr1=[8,9]
+
+        var a=[]
+        for(var i=0;i<arr.length;i++){
+            if(a.indexOf(arr[i])===-1){
+                a.push(arr[i])
+            }
+        }
+        console.log(a);//[1,3,4,2,5]
+        var b=[...new Set(arr)]
+        console.log(b);//[1,3,4,2,5]
+
+        //复制数组 使用concat合并数组返回一个新数组
+        var c=arr.concat([])//[1,1,3,3,4,4,2,2,5,5]
+        console.log(c);
+        var d=[...arr]
+        console.log(d);//[1,1,3,3,4,4,2,2,5,5]
+        console.log("11111111111111111111111111111111111");
+        //合并数组
+        var e= arr.concat(arr1)
+        var f=arr.push(arr1)
+        console.log(e);
+        console.log(f);
+    </script>
+</body>
+</html>

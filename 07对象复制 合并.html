@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //复制对象
+        var obj={
+            a:1,
+            b:2,
+            c:3
+        }
+        var aa={}
+        for(var key in obj){
+            aa[key]=obj[key]
+        }
+        console.log(aa);
+        console.log(11111111111);
+        var obj2=Object.assign({},obj)
+        console.log(obj2);
+        //扩展运算符 ... 
+        var obj3={...obj}
+        console.log(obj3);
+
+        console.log('合并');
+        var obj4={
+            d:4,
+            e:5
+        }
+        var obj5={...obj,...obj4}
+        console.log(obj5);
+        var obj6=Object.assign(obj,obj4)
+        console.log(obj6);
+    </script>
+
+</body>
+</html>

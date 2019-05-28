@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        
+        var arr=[1,2,3,4] //要求得到一个新数组，值为[2,3,4,5]
+        //  var a=arr.map(function(v){
+        //      return v+1
+        //  })  
+            var  a=[]
+         arr.forEach(function(v){
+            a.push(v+3)
+         }) 
+
+         var b=arr.map(v=>{
+             return v+1
+         })
+         console.log(a);
+         console.log(b);
+    </script>
+</body>
+</html>
